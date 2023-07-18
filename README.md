@@ -149,10 +149,13 @@ E. Create a new OU named “_CLIENTS” and drag Client-1 into there (Step is no
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+A. Setup Remote Desktop for non-administrative users on Client-1 <br>
+B. Log into Client-1 as mydomain.com\jane_admin and open system properties <br>
+i. System -> Remote Desktop -> Select Users that Can Remotely Access this PC -> Add -> domain users -> Check Names -> OK -> OK <br>
+B. You can now log into Client-1 as a normal, non-administrative user now <br>
+C. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/a1524939-260d-4262-9989-0c30c04e7fa9" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
