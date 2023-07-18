@@ -37,13 +37,15 @@ i. Take note of the Resource Group and Virtual Network (Vnet) that get created a
 <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/afd3b375-aed3-4217-9f78-839ed9282b79" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+
 B. Set Domain Controller’s NIC Private IP address to be static <br>
 i. Go back to the home page -> Got your Network Interface -> IP Configurations -> ipconfig -> Static -> Save. Keep everything as is, except the allocation
 <p>
 <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/7c853e21-6281-4636-a368-a365fc9691a3" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+
 C . Create the Client VM (Windows Pro 10) named “Client-1”. Use the same Resource Group and Vnet that was created for DC-1 <br>
-i. Make sure both VMs are in the same Vnet (you can check with Network Watcher), use the same same number of vm's (two in this case) and region,  create your username and passeord and checkmark the licensing box <br>
+i. Make sure both VMs are in the same Vnet (you can check with Network Watcher), use the same same number of vm's (two in this case) and region,  create your username and password and checkmark the licensing box. <br>
 </p>
 <p>
 <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/daad9b29-125d-4c2b-85b9-b8331a62a3d6" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -51,13 +53,26 @@ i. Make sure both VMs are in the same Vnet (you can check with Network Watcher),
 <br />
 
 <p>
-2.Ensure Connectivity between the client and Domain Controller
-A. Login to Client-1 with Remote Desktop using the public IP address and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
-B. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
+2. Ensure Connectivity between the client and Domain Controller <br>
+A. Login to Client-1 with Remote Desktop using the public IP address and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping) using the command line -> start -> CMD <br>
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/682857c4-f4e9-444e-9132-aac9c7d9ee37 height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+B. Login to the Domain Controller (DC-1) and enable ICMPv4 on the local windows Firewall <br>
+i. start -> wf.msc ->
+ii. Inbound Rules -> Click "Protocol" and look for ICMPv4 -> Enable: Core Network Diagnostics (private) and Core Network Diagnostics (Domain)
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/ac84bc04-6494-4154-97b1-5fbba85b6397" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/3e75d2da-967e-4321-a02b-cc08f95941bd" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p
+
 C. Check back at Client-1 to see the ping succeed
-</p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/984000e6-afe3-4a9c-a827-f80d6abb3fb3 height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 </p>
 <br />
 
@@ -74,7 +89,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+</p><p>
+
 <br />
 
 <p>
