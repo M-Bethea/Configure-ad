@@ -48,17 +48,16 @@ i. Make sure both VMs are in the same Vnet (you can check with Network Watcher),
 <p>
 <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/daad9b29-125d-4c2b-85b9-b8331a62a3d6" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/daad9b29-125d-4c2b-85b9-b8331a62a3d6" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+2.Ensure Connectivity between the client and Domain Controller
+A. Login to Client-1 with Remote Desktop using the public IP address and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
+B. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
+C. Check back at Client-1 to see the ping succeed
 </p>
-
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
