@@ -119,12 +119,33 @@ i. Use user jane_admin as your admin account from now on
 </p>
 <br />
 
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+5. From the Azure Portal, set Client-1’s DNS settings to the Domain Controllers (DC’s) Private IP address <br>
+A. Can scroll down or got to networking and you'll see "NIC Private IP" <br>
+i. Go to Client-1 -> Networking -> Network Interface -> DNS Servers -> Custom -> DC-1's Private IP -> Save
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/4dbd8b66-40fa-45b5-bf3c-aa1ce9f9b52d" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/0f83bff0-21dc-404d-9a15-4e35e03caa71" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+ii. From the Azure Portal, restart Client-1 <br>
+B. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart) <br>
+i. Type ipconfig /all to check DNS server
+ii. Ping the DNS Server, should get a reply
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/4df4da66-3186-4bc2-960e-b32185b7847b height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+C. Join Client-1 to your domain (mydomain.com) <br>
+i. Start -> Setting -> System -> About -> Rename this PC Advanced -> Change -> Domain: mydomain.com (or your domain) -> OK
+ii. If prompted for username and password: username mydomain.com\jane_admin and your password -> OK
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/4289ffc3-707a-4325-bd03-d9a97ff9501c height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+D. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain <br>
+E. Create a new OU named “_CLIENTS” and drag Client-1 into there (Step is not really necessary, just for organizational purposes.)
+<p>
 <br />
 
 <p>
