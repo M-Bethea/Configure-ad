@@ -70,6 +70,7 @@ ii. Inbound Rules -> Click "Protocol" and look for ICMPv4 -> Enable: Core Networ
 </p
 
 C. Check back at Client-1 to see the ping succeed
+i. Press ctrl + C to end the ping
 <p>
 <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/984000e6-afe3-4a9c-a827-f80d6abb3fb3 height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -77,10 +78,23 @@ C. Check back at Client-1 to see the ping succeed
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+3. Install Active Directory
+A. Login to DC-1 and install Active Directory Domain Services
+i. In the Server Manager, Add "Roles and Features", Select next until you get to "Server Roles", Check "Active Directory Domain Services" -> Add Features -> Keep clicking next until you can install
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/ffbf8f9d-5c96-4bee-a7fe-65f8ac00ad8b" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+B. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is) <br>
+i. Click the flag and promote this server to a domain controller <br>
+ii. Make a password and next through until you can install <br>
+iii. The VM may shut itself down
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/3e1cc858-113a-44c0-a34a-4b674cfcf394" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/38a94a6e-fa01-4e2b-b5ca-9ab19d21f1fa" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+C. Restart and/or log back into DC-1 as [user: mydomain.com\labuser] (your username)
 </p>
 <br />
 
