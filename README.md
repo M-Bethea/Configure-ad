@@ -99,12 +99,24 @@ C. Restart and/or log back into DC-1 as [user: mydomain.com\labuser] (your usern
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+4. Create an Admin and Normal User Account in AD: Tools -> Active Directory Users and Computers -> Right click mydomain.com(or your username) -> New -> Organizational Unit 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p><p>
-
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/543728a9-a342-416f-a9bd-a7f67d5904ee" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+A. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”  <br>
+i. Create a new OU named “_ADMINS” <br>
+B. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”: Admins -> New -> User <br>
+i. Uncheck "user must change password" and check "password never expires" <br>
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/81be2e87-e57a-4b9d-8844-18934521a9f1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+ii. Add jane_admin to the “Domain Admins” Security Group: Right Click "jane_admin" -> Properties -> Member Of -> Add -> Domain -> Check Names -> Domain Admins -> OK -> Apply -> OK <br>
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/58bb3b11-a7a8-400f-8453-5ff6a4541186" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+C. Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin” <br>
+i. Use user jane_admin as your admin account from now on 
+</p>
 <br />
 
 <p>
