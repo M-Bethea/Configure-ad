@@ -153,24 +153,37 @@ A. Setup Remote Desktop for non-administrative users on Client-1 <br>
 B. Log into Client-1 as mydomain.com\jane_admin and open system properties <br>
 i. System -> Remote Desktop -> Select Users that Can Remotely Access this PC -> Add -> domain users -> Check Names -> OK -> OK <br>
 B. You can now log into Client-1 as a normal, non-administrative user now <br>
-C. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once
+C. Normally you’d want to do this with Group Policy that allows you to change many systems at once
 </p>
 <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/a1524939-260d-4262-9989-0c30c04e7fa9" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+6. Create a bunch of additional users and attempt to log into client-1 with one of the users <br>
+A. Login to DC-1 as jane_admin <br>
+B. Open "PowerShell_ise" as an administrator <br>
+i. Right click -> Open as Administrator
+C. Create a new File and paste the contents of the <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1/">script</a> into it  <br>
+i. Run the script and observe the accounts being created <br>
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/ca9dc35f-b4cf-41ce-8705-192ed8636345" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+D. When finished, open ADUC and observe the accounts in the appropriate OU <br>
+i. Right click and Refresh "_EMPLOYEES" <br>
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/57fdcbfd-74e8-4859-82d7-8ff9d5805b0c" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+E. Attempt to log into Client-1 with one of the accounts (take note of the password in the script: Password1) <br>
+<p>
+<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/1cda88e7-e517-42fc-a510-20d6564c3fd3" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/4b886e4d-bc1c-44c0-8b4f-f664968f1b4e" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+<p>
+  <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/dfc643fa-3555-4870-8e98-58a74b9d2ceb height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
