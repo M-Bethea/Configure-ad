@@ -173,9 +173,6 @@ C. Create a new File and paste the contents of the <a href="https://github.com/j
 </p>
 D. When finished, open ADUC and observe the accounts in the appropriate OU <br>
 &nbsp; i. Right click and Refresh "_EMPLOYEES" <br>
-<p>
-<img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/57fdcbfd-74e8-4859-82d7-8ff9d5805b0c" height="70%" width="70%" alt="Create Users"/>
-</p>
 E. Attempt to log into Client-1 with one of the accounts (take note of the password in the script: Password1) <br>
 <p>
 <img src="https://github.com/M-Bethea/Configure-ad/assets/139162550/1cda88e7-e517-42fc-a510-20d6564c3fd3" height="70%" width="70%" alt="Create Users"/>
