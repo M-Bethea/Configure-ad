@@ -151,8 +151,8 @@ E. Create a new OU named “_CLIENTS” and drag Client-1 into there (Step is no
 <br />
 
 <p>
-A. Setup Remote Desktop for non-administrative users on Client-1 <br>
-B. Log into Client-1 as mydomain.com\jane_admin and open system properties <br>
+6. Setup Remote Desktop for non-administrative users on Client-1 <br>
+A. Log into Client-1 as mydomain.com\jane_admin and open system properties <br>
 &nbsp; i. System -> Remote Desktop -> Select Users that Can Remotely Access this PC -> Add -> domain users -> Check Names -> OK -> OK <br>
 B. You can now log into Client-1 as a normal, non-administrative user now <br>
 C. Normally you’d want to do this with Group Policy that allows you to change many systems at once
@@ -162,7 +162,7 @@ C. Normally you’d want to do this with Group Policy that allows you to change 
 <br />
 
 <p>
-6. Create a bunch of additional users and attempt to log into client-1 with one of the users <br>
+7. Create a bunch of additional users and attempt to log into client-1 with one of the users <br>
 A. Login to DC-1 as jane_admin <br>
 B. Open "PowerShell_ise" as an administrator <br>
 &nbsp; i. Right click -> Open as Administrator <br>
